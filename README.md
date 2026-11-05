@@ -1,2 +1,0 @@
-# aiogram-bot
-aiogram-bot
