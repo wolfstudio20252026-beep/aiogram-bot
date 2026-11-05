@@ -16,10 +16,12 @@ dp.include_router(router)
 async def main():
     bot = Bot(token=TOKEN)
 
+    await start_webhook_server()
+    
     asyncio.create_task(notifier(bot))
-
     print("Start...")
     await dp.start_polling(bot)
+
 
 async def handle(request):
     return web.Response(text="Bot is running!")
